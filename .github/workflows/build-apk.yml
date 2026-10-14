@@ -1,4 +1,4 @@
-name: Build MultiFetch Alpha 0.4.3
+name: Build MultiFetch Alpha 0.4.4
 
 on:
   workflow_dispatch:
@@ -14,10 +14,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Extract Alpha 0.4.3 project
+      - name: Extract Alpha 0.4.4 project
         run: |
           rm -rf MultiFetch
-          unzip -o MultiFetch-Android-Alpha-0.4.3.zip
+          unzip -o MultiFetch-Android-Alpha-0.4.4.zip
           ls -la MultiFetch
 
       - name: Set up JDK 17
@@ -52,5 +52,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: MultiFetch-Alpha-0.4.3-debug-apk
+          name: MultiFetch-Alpha-0.4.4-debug-apk
           path: MultiFetch/app/build/outputs/apk/debug/app-debug.apk
